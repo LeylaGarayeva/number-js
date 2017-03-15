@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+  <h3>Əlaqə nömrənizi əlavə edin:</h3> 
+ 	<input type="text" name="" id="numberText" onkeypress="keyTextNumber()" maxlength="19" onclick="moveNumbers(this.value.length)">
+</body>
+</html>
+
+<script>
+function keyTextNumber(){
+    var textNumber=document.getElementById('numberText').value;
+	var numberLength=document.getElementById('numberText').value.length;
+	// if (document.getElementById('numberText').value.length==0) {
+	// 	document.getElementById('numberText').value='(+994)-'
+	// }    
+    if (numberLength==9 || numberLength==13 || numberLength==16) {
+    	document.getElementById('numberText').value=textNumber+'-';
+    }
+}
+function moveNumbers(s){
+	if (s==0) {
+		document.getElementById('numberText').value='(+994)-';
+	}
+}
+</script>
+</body>
+</html>
